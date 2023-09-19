@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface SidebarElementProps {
   id: string;
@@ -22,7 +22,7 @@ const SidebarElement: React.FC<SidebarElementProps> = ({
         target="_blank"
         rel="noreferrer noopener"
       >
-        <div className="grid md:grid-cols-2">
+        <div className="grid lg:grid-cols-2 gap-2">
           <div className="flex items-center justify-center">
             <Image src={avatarUrl} height={50} width={50} alt={login} />
           </div>

@@ -1,24 +1,24 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Figtree, Cabin } from "next/font/google";
-import { ApolloWrapper } from "../lib/apolloProvider";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Figtree, Cabin } from 'next/font/google';
+import { ApolloWrapper } from '../lib/apolloProvider';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const figtree = Figtree({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-figtree",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-figtree',
 });
 const cabin = Cabin({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-cabin",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-cabin',
 });
 
 export const metadata: Metadata = {
-  title: "GitInsight",
-  description: "Providing Insight on Github Users",
+  title: 'GitInsight',
+  description: 'Providing Insight on Github Users',
 };
 
 export default function RootLayout({
