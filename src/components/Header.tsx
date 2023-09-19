@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -10,7 +10,8 @@ export default function Header() {
           src="/GitInsightLogoCropped.png"
           width={180}
           height={180}
-          alt={'GitInsight logo'}
+          alt={"GitInsight logo"}
+          priority
         />
       </Link>
       <div className="flex flex-row items-end">
