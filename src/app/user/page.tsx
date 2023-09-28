@@ -42,6 +42,7 @@ export default function UserPage() {
   const { data } = useSuspenseQuery<{ user: User }>(query, {
     variables: { login },
   });
+  console.log(data);
   const user = data?.user;
 
   if (!user) {
