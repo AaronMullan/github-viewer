@@ -1,18 +1,18 @@
 // lib/apollo-provider.js
-'use client';
+"use client";
 
-import { HttpLink } from '@apollo/client';
-import { ApolloLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context'; // Import setContext
+import { HttpLink } from "@apollo/client";
+import { ApolloLink } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context"; // Import setContext
 
 import {
   NextSSRApolloClient,
   ApolloNextAppProvider,
   NextSSRInMemoryCache,
   SSRMultipartLink,
-} from '@apollo/experimental-nextjs-app-support/ssr';
+} from "@apollo/experimental-nextjs-app-support/ssr";
 
-const GITHUB_API_BASE_URL = 'https://api.github.com/graphql';
+const GITHUB_API_BASE_URL = "https://api.github.com/graphql";
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 
 function makeClient() {
@@ -20,7 +20,8 @@ function makeClient() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`,
+        authorization: `Bearer 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
+        `,
       },
     };
   });
@@ -34,7 +35,7 @@ function makeClient() {
   return new NextSSRApolloClient({
     cache: new NextSSRInMemoryCache(),
     link:
-      typeof window === 'undefined'
+      typeof window === "undefined"
         ? ApolloLink.from([
             new SSRMultipartLink({
               stripDefer: true,
