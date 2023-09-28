@@ -20,8 +20,7 @@ function makeClient() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer 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
-        `,
+        authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`,
       },
     };
   });
