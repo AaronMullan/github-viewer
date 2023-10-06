@@ -13,7 +13,7 @@ import {
 } from "@apollo/experimental-nextjs-app-support/ssr";
 
 const GITHUB_API_BASE_URL = "https://api.github.com/graphql";
-const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+const GITHUB_ACCESS_TOKEN = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
 
 function makeClient() {
   const authLink = setContext((_, { headers }) => {
